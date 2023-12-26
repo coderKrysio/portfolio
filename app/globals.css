@@ -2,26 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* width */
+
+::-webkit-scrollbar {
+    width: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 0px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+.landing--heading {
+    background-image: url("../public/images/landing-image.jpg");
+    background-size: auto 100%;
+    background-clip: text;
+    color: transparent;
+}
+
+.top--box {
+    background-image: url("../public/images/about-me-img.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -40px;
+    background-size: 100% auto;
+}
+
+.bottom--box {
+    background-image: url("../public/images/about-me-img.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% -544px;
+    background-size: 120% auto;
+}
+
+.polygon {
+    width: 800px;
+    height: 700px;
+    background-color: #C6B0BC;
+    opacity: 30%;
+    clip-path: polygon(45% 0, 75% 0, 30% 50%, 75% 100%, 45% 100%, 0% 50%);
 }
