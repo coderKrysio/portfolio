@@ -1,5 +1,5 @@
 "use client";
-import { CircleDashed, Github } from "lucide-react";
+import { Chrome, CircleDashed, Github } from "lucide-react";
 import { Kanit } from "next/font/google";
 import Link from "next/link";
 import {
@@ -26,6 +26,7 @@ const projectsData = [
         title: "最初のプロジェクト",
         bannerImg: "/images/dummyimg.png",
         githubLink: "/",
+        liveLink: "/",
     },
     {
         id: 2,
@@ -36,6 +37,7 @@ const projectsData = [
         nameinjapansese: "プロジェクト名",
         title: "二つのプロジェクト",
         bannerImg: "/images/dummyimg.png",
+        liveLink: "/",
         githubLink: "/",
     },
     {
@@ -47,6 +49,7 @@ const projectsData = [
         nameinjapansese: "プロジェクト名",
         title: "スリープロジェクト",
         bannerImg: "/images/dummyimg.png",
+        liveLink: "/",
         githubLink: "/",
     },
     {
@@ -58,6 +61,7 @@ const projectsData = [
         nameinjapansese: "プロジェクト名",
         title: "フォープロジェクト",
         bannerImg: "/images/dummyimg.png",
+        liveLink: "/",
         githubLink: "/",
     },
 ];
@@ -74,6 +78,7 @@ export const ListingProjects = () => {
                         nameinjapansese,
                         title,
                         bannerImg,
+                        liveLink,
                         githubLink,
                     },
                     index
@@ -112,23 +117,35 @@ export const ListingProjects = () => {
                                 </div>
                             </JackInTheBox>
 
+                            <div className="absolute bottom-[-17.5px] right-[25px] z-[1] flex justify-center items-center gap-4">
                             <Slide
                                 direction="right"
                                 delay={600}
                                 duration={400}
-                                className="absolute bottom-[-20px] right-[25px] z-[1]"
-                                fraction={0}
+                                className="w-fit"
+                                cascade
                             >
                                 <Link href={githubLink}>
                                     <Github
-                                        width={"40px"}
-                                        height={"40px"}
+                                        width={"35px"}
+                                        height={"35px"}
                                         strokeWidth={1.2}
-                                        className="hover:fill-[#FBB95D] transition-colors"
+                                        className="hover:fill-[#D7713B] transition-colors"
+                                        color="#FBB95D"
+                                    />
+                                </Link>
+
+                                <Link href={liveLink}>
+                                    <Chrome
+                                        width={"35px"}
+                                        height={"35px"}
+                                        strokeWidth={1.2}
+                                        className="hover:fill-[#D7713B] transition-colors"
                                         color="#FBB95D"
                                     />
                                 </Link>
                             </Slide>
+                            </div>
                         </div>
 
                         <div
