@@ -19,6 +19,7 @@ export const Landing = () => {
                             effect="flash"
                             cascade
                             damping={0.2}
+                            triggerOnce
                         >
                             coder
                         </AttentionSeeker>
@@ -30,6 +31,7 @@ export const Landing = () => {
                             cascade
                             delay={1200}
                             damping={0.2}
+                            triggerOnce
                         >
                             krysio
                         </AttentionSeeker>
@@ -37,7 +39,7 @@ export const Landing = () => {
                 </div>
 
                 <div className="relative w-full h-full flex flex-col justify-between items-end bg-transparent">
-                    <Fade delay={1300} fraction={0} duration={600} className="absolute top-[250px] left-[-180px]">
+                    <Fade delay={1300} fraction={0} duration={600} triggerOnce className="absolute top-[250px] left-[-180px]">
                         <div className="text-end text-[176px] rotate-90 leading-[0.9] opacity-30 text-[#FBB95D]">
                             <span>Anushree<br/>Jaiswal</span>
                         </div>
@@ -48,7 +50,8 @@ export const Landing = () => {
                             <Fade
                                 cascade
                                 damping={0.15}
-                                className="text-[24px] font-bold transform rotate-90 text-[#562151] whitespace-nowrap opacity-85 select-none"
+                                triggerOnce
+                                className="text-[24px] font-bold transform rotate-90 text-[#562151] whitespace-nowrap select-none"
                             >
                                 コードクリシオ
                             </Fade>
@@ -58,6 +61,7 @@ export const Landing = () => {
                             <Fade
                                 cascade
                                 damping={0.15}
+                                triggerOnce
                                 className="text-[40px] transform rotate-90 text-[#3F2021] whitespace-nowrap select-none"
                             >
                                 アヌシュリー・ジャイワル
@@ -68,7 +72,8 @@ export const Landing = () => {
                             <Fade
                                 cascade
                                 damping={0.15}
-                                className="text-[56px] transform rotate-90 text-[#D7713B] whitespace-nowrap opacity-60 select-none"
+                                triggerOnce
+                                className="text-[56px] transform rotate-90 text-[#D7713B] whitespace-nowrap opacity-75 select-none"
                             >
                                 Frontend Developer
                             </Fade>
@@ -76,7 +81,7 @@ export const Landing = () => {
                     </div>
 
                     <div className="w-full h-[80px] flex justify-end items-center gap-[20px]">
-                        <Fade delay={2300} direction="right" cascade>
+                        <Fade delay={2300} direction="right" cascade triggerOnce>
                             <Link
                                 href={"https://github.com/coderKrysio/"}
                                 target="_blank"
@@ -90,7 +95,7 @@ export const Landing = () => {
                             </Link>
 
                             <Link
-                                href={"https://github.com/coderKrysio/"}
+                                href={"https://linkedin.com/in/coderKrysio/"}
                                 target="_blank"
                             >
                                 <Linkedin
@@ -102,7 +107,7 @@ export const Landing = () => {
                             </Link>
 
                             <Link
-                                href={"https://github.com/coderKrysio/"}
+                                href={"https://twitter.com/coderKrysio"}
                                 target="_blank"
                             >
                                 <Twitter

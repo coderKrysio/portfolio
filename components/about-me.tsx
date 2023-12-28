@@ -10,7 +10,7 @@ const kanit = Kanit({
 
 export const AboutMe = () => {
     return (
-        <section className="w-full min-h-screen flex flex-col mt-[60px]">
+        <section id="about-me" className="w-full min-h-screen flex flex-col mt-[60px]">
             <div className="h-[280px] relative flex items-end justify-center">
                 <AttentionSeeker effect="flash" duration={300}>
                     <Square

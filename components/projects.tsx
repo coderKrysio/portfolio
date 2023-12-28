@@ -23,7 +23,7 @@ import {
     Triangle,
 } from "lucide-react";
 import { Kanit } from "next/font/google";
-import { AttentionSeeker, Fade, Flip, Slide, Zoom } from "react-awesome-reveal";
+import { AttentionSeeker, Fade, Flip, Slide } from "react-awesome-reveal";
 
 const kanit = Kanit({
     weight: ["300", "400", "500"],
@@ -32,8 +32,8 @@ const kanit = Kanit({
 
 export const Projects = () => {
     return (
-        <section className="w-full min-h-screen relative flex justify-center items-center mt-[350px] px-[60px] gap-[90px]">
-            <Slide direction="right" className="w-full" duration={1500}>
+        <section id="projects" className="w-full min-h-screen relative flex justify-center items-center mt-[350px] px-[60px] gap-[90px]">
+            <Slide direction="right" className="w-full" duration={1500} triggerOnce>
                 <div className="polygon" />
             </Slide>
 
@@ -181,7 +181,7 @@ export const Projects = () => {
                 />
             </Fade>
 
-            <div className={`absolute left-[200px] w-[450px] text-3xl text-[#FFE9CA] font-medium z-[1] select-none ${kanit.className}`}>
+            <div className={`absolute left-[200px] w-[450px] text-3xl text-[#FFE9CA] font-medium flex flex-col z-[1] select-none ${kanit.className}`}>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit laborum, placeat sunt totam praesentium aperiam eius beatae aspernatur. Beatae debitis voluptatum quis rerum qui iusto voluptas soluta tempore. Fugiat, alias.
             </div>
 
@@ -196,7 +196,7 @@ export const Projects = () => {
                         Projects
                     </p>
                 </Flip>
-                <Slide direction="right" duration={500}>
+                <Slide direction="right" duration={500} triggerOnce>
                     <div className="w-[400px] h-full">
                         <img
                             src="/images/model-img1.jpg"
