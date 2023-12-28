@@ -12,7 +12,7 @@ import { Fade, Roll, Slide } from "react-awesome-reveal";
 
 export const ContactMe = () => {
     return (
-        <section className="w-full min-h-screen flex flex-col mt-[60px]">
+        <section id="contact-me" className="w-full min-h-screen flex flex-col mt-[60px]">
             <div className="relative ml-[30px] flex h-screen">
                 <Fade
                     big
@@ -133,9 +133,9 @@ export const ContactMe = () => {
                 </div>
             </div>
 
-            <div className="h-[100px]">
-                {" "}
-                hi there this is the follow up action
+            <div className="h-[100px] w-full text-center select-none text-[#D7713B] font-medium flex flex-col justify-center items-center">
+                coderkrysio.vercel.app
+                <span>© All rights reversed 2023</span>
             </div>
         </section>
     );
