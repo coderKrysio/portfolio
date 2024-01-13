@@ -135,7 +135,7 @@ export const ContactMe = () => {
 
             <div className="h-[100px] w-full text-center select-none text-[#D7713B] font-medium flex flex-col justify-center items-center">
                 coderkrysio.vercel.app
-                <span>© All rights reversed 2023</span>
+                <span>© All rights reversed {new Date().getFullYear()}</span>
             </div>
         </section>
     );
