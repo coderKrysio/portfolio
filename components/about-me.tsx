@@ -1,6 +1,6 @@
 "use client";
-import { Circle, Square } from "lucide-react";
-import { AttentionSeeker, Fade, Rotate } from "react-awesome-reveal";
+import { BarChart2, Circle, Square } from "lucide-react";
+import { AttentionSeeker, Fade, Rotate, Slide } from "react-awesome-reveal";
 import { Kanit } from "next/font/google";
 
 const kanit = Kanit({
@@ -10,7 +10,10 @@ const kanit = Kanit({
 
 export const AboutMe = () => {
     return (
-        <section id="about-me" className="w-full min-h-screen flex flex-col mt-[60px]">
+        <section
+            id="about-me"
+            className="w-full min-h-screen flex flex-col mt-[60px] relative"
+        >
             <div className="h-[280px] relative flex items-end justify-center">
                 <AttentionSeeker effect="flash" duration={300}>
                     <Square
@@ -88,6 +91,43 @@ export const AboutMe = () => {
                         ただ私を知るために、ええ、ええ
                     </span>
                 </AttentionSeeker>
+            </div>
+
+            <div className="absolute bottom-[-160px] left-1/2 transform -translate-x-1/2 flex">
+                <Slide direction="down" triggerOnce>
+                <BarChart2
+                    width={165}
+                    height={165}
+                    strokeWidth={0.9}
+                    fillOpacity={0}
+                    color="#562151"
+                    className="rotate-180"
+                />
+                <BarChart2
+                    width={165}
+                    height={165}
+                    strokeWidth={0.9}
+                    fillOpacity={0}
+                    color="#562151"
+                    className="transform scale-x-[-1] rotate-180"
+                />
+                <BarChart2
+                    width={165}
+                    height={165}
+                    strokeWidth={0.9}
+                    fillOpacity={0}
+                    color="#562151"
+                    className="rotate-180"
+                />
+                <BarChart2
+                    width={165}
+                    height={165}
+                    strokeWidth={0.9}
+                    fillOpacity={0}
+                    color="#562151"
+                    className="transform scale-x-[-1] rotate-180"
+                />
+                </Slide>
             </div>
         </section>
     );
