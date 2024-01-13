@@ -2,6 +2,7 @@
 import {
     Bean,
     Bird,
+    ChevronsDown,
     Citrus,
     CookieIcon,
     CookingPot,
@@ -32,8 +33,16 @@ const kanit = Kanit({
 
 export const Projects = () => {
     return (
-        <section id="projects" className="w-full min-h-screen relative flex justify-center items-center mt-[350px] px-[60px] gap-[90px]">
-            <Slide direction="right" className="w-full" duration={1500} triggerOnce>
+        <section
+            id="projects"
+            className="w-full min-h-screen relative flex justify-center items-center mt-[350px] px-[60px] gap-[90px]"
+        >
+            <Slide
+                direction="right"
+                className="w-full"
+                duration={1500}
+                triggerOnce
+            >
                 <div className="polygon" />
             </Slide>
 
@@ -181,8 +190,13 @@ export const Projects = () => {
                 />
             </Fade>
 
-            <div className={`absolute left-[200px] w-[450px] text-3xl text-[#FFE9CA] font-medium flex flex-col z-[1] select-none ${kanit.className}`}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit laborum, placeat sunt totam praesentium aperiam eius beatae aspernatur. Beatae debitis voluptatum quis rerum qui iusto voluptas soluta tempore. Fugiat, alias.
+            <div
+                className={`absolute left-[200px] w-[450px] text-3xl text-[#FFE9CA] font-medium flex flex-col z-[1] select-none ${kanit.className}`}
+            >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Impedit laborum, placeat sunt totam praesentium aperiam eius
+                beatae aspernatur. Beatae debitis voluptatum quis rerum qui
+                iusto voluptas soluta tempore. Fugiat, alias.
             </div>
 
             <div className="relative flex items-center justify-end w-fit">
@@ -204,6 +218,27 @@ export const Projects = () => {
                         />
                     </div>
                 </Slide>
+            </div>
+
+            <div className="absolute left-[30%] bottom-[-230px] opacity-65 z-[1]">
+                <AttentionSeeker
+                    effect="flash"
+                    cascade
+                    damping={0.25}
+                    
+                >
+                    <ChevronsDown
+                        width={230}
+                        height={230}
+                        color="#FBB95D"
+                    />
+                    <ChevronsDown
+                        width={230}
+                        height={230}
+                        color="#FBB95D"
+                        className="mt-[-90px] "
+                    />
+                </AttentionSeeker>
             </div>
         </section>
     );

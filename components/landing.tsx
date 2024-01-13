@@ -1,8 +1,13 @@
 "use client";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import { Poppins } from "next/font/google";
+import { Londrina_Outline, Poppins } from "next/font/google";
 import Link from "next/link";
 import { AttentionSeeker, Fade, Flip, Rotate } from "react-awesome-reveal";
+
+const lodrina = Londrina_Outline ( {
+    weight:["400"],
+    subsets: ["latin"],
+})
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -13,7 +18,7 @@ export const Landing = () => {
     return (
         <section className={poppins.className}>
             <div className="flex w-screen h-screen landing--heading px-6">
-                <div className="text-[15rem] flex flex-col justify-center tracking-wider leading-none font-extrabold">
+                <div className="text-[15rem] flex flex-col justify-center tracking-wider leading-none font-extrabold select-none">
                     <div className="flex flex-row">
                         <AttentionSeeker
                             effect="flash"
@@ -39,8 +44,8 @@ export const Landing = () => {
                 </div>
 
                 <div className="relative w-full h-full flex flex-col justify-between items-end bg-transparent">
-                    <Fade delay={1300} fraction={0} duration={600} triggerOnce className="absolute top-[250px] left-[-180px]">
-                        <div className="text-end text-[176px] rotate-90 leading-[0.9] opacity-30 text-[#FBB95D]">
+                    <Fade delay={1300} fraction={0} duration={600} triggerOnce className="absolute top-[175px] left-[-150px]">
+                        <div className={`text-end text-[216px] rotate-90 leading-[0.9] opacity-30 text-[#FBB95D] ${lodrina.className}`}>
                             <span>Anushree<br/>Jaiswal</span>
                         </div>
                     </Fade>

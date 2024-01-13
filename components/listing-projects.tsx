@@ -68,7 +68,7 @@ const projectsData = [
 
 export const ListingProjects = () => {
     return (
-        <section className="w-full min-h-screen relative flex flex-col justify-center items-center mt-[200px] px-[60px] gap-[90px]">
+        <section className="w-full min-h-screen relative flex flex-col justify-center items-center mt-[200px] px-[60px] gap-[70px]">
             {projectsData.map(
                 (
                     {
@@ -129,7 +129,7 @@ export const ListingProjects = () => {
                                     <Github
                                         width={"35px"}
                                         height={"35px"}
-                                        strokeWidth={1.2}
+                                        strokeWidth={2}
                                         className="hover:fill-[#D7713B] transition-colors"
                                         color="#FBB95D"
                                     />
@@ -139,7 +139,7 @@ export const ListingProjects = () => {
                                     <Chrome
                                         width={"35px"}
                                         height={"35px"}
-                                        strokeWidth={1.2}
+                                        strokeWidth={2}
                                         className="hover:fill-[#D7713B] transition-colors"
                                         color="#FBB95D"
                                     />
