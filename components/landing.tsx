@@ -4,10 +4,10 @@ import { Londrina_Outline, Poppins } from "next/font/google";
 import Link from "next/link";
 import { AttentionSeeker, Fade, Flip, Rotate } from "react-awesome-reveal";
 
-const lodrina = Londrina_Outline ( {
-    weight:["400"],
+const lodrina = Londrina_Outline({
+    weight: ["400"],
     subsets: ["latin"],
-})
+});
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -18,35 +18,26 @@ export const Landing = () => {
     return (
         <section className={poppins.className}>
             <div className="flex w-screen h-screen landing--heading px-6">
-                <div className="text-[15rem] flex flex-col justify-center tracking-wider leading-none font-extrabold select-none">
-                    <div className="flex flex-row">
-                        <AttentionSeeker
-                            effect="flash"
-                            cascade
-                            damping={0.2}
-                            triggerOnce
-                        >
-                            coder
-                        </AttentionSeeker>
-                    </div>
-
-                    <div className="flex flex-row">
-                        <AttentionSeeker
-                            effect="flash"
-                            cascade
-                            delay={1200}
-                            damping={0.2}
-                            triggerOnce
-                        >
-                            krysio
-                        </AttentionSeeker>
-                    </div>
+                <div className="border-2 border-white w-full">
+                    hi
                 </div>
 
                 <div className="relative w-full h-full flex flex-col justify-between items-end bg-transparent">
-                    <Fade delay={1300} fraction={0} duration={600} triggerOnce className="absolute top-[175px] left-[-150px]">
-                        <div className={`text-end text-[216px] rotate-90 leading-[0.9] opacity-30 text-[#FBB95D] ${lodrina.className}`}>
-                            <span>Anushree<br/>Jaiswal</span>
+                    <Fade
+                        delay={1300}
+                        fraction={0}
+                        duration={600}
+                        triggerOnce
+                        className="absolute top-[175px] right-[60px]"
+                    >
+                        <div
+                            className={`text-end text-[216px] rotate-90 leading-[0.9] opacity-30 text-[#FBB95D] fill-white ${lodrina.className}`}
+                        >
+                            <span>
+                                Anushree
+                                <br />
+                                Jaiswal
+                            </span>
                         </div>
                     </Fade>
 
@@ -86,7 +77,12 @@ export const Landing = () => {
                     </div>
 
                     <div className="w-full h-[80px] flex justify-end items-center gap-[20px]">
-                        <Fade delay={2300} direction="right" cascade triggerOnce>
+                        <Fade
+                            delay={2300}
+                            direction="right"
+                            cascade
+                            triggerOnce
+                        >
                             <Link
                                 href={"https://github.com/coderKrysio/"}
                                 target="_blank"
