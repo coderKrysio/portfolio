@@ -36,19 +36,27 @@ export const ListingProjects = () => {
                         className="h-screen pt-[80px] relative flex flex-col justify-between mb-[60px] select-none"
                         key={index}
                     >
-                        <Slide direction="right" className="absolute right-0 top-[45px] z-[1]">
+                        <Slide
+                            direction="right"
+                            className="absolute right-0 top-[45px] z-[1]"
+                            triggerOnce
+                        >
                             <span className="font-semibold py-4 text-3xl opacity-40 text-[#FB8987]">
                                 {nameinjapansese}
                             </span>
-                            </Slide>
+                        </Slide>
 
                         <div className="relative flex items-center justify-between gap-[150px] h-auto">
                             <Fade
                                 duration={600}
                                 delay={500}
                                 className={`max-w-[350px] h-full text-lg flex px-3 ${kanit.className}`}
+                                triggerOnce
                             >
-                                {description}
+                                <div className="flex flex-col gap-3">
+                                    <p>{description}</p>
+                                    <p>Tech Stack:</p>
+                                </div>
                             </Fade>
 
                             <Slide
@@ -60,40 +68,41 @@ export const ListingProjects = () => {
                                 </div>
                             </Slide>
 
-                            <JackInTheBox>
+                            <JackInTheBox triggerOnce>
                                 <div className="w-full h-auto opacity-95 rounded-xl overflow-hidden">
                                     <img src={bannerImg} className="w-full" />
                                 </div>
                             </JackInTheBox>
 
                             <div className="absolute bottom-[-17.5px] right-[25px] z-[1] flex justify-center items-center gap-4">
-                            <Slide
-                                direction="right"
-                                delay={600}
-                                duration={400}
-                                className="w-fit"
-                                cascade
-                            >
-                                <Link href={githubLink}>
-                                    <Github
-                                        width={"35px"}
-                                        height={"35px"}
-                                        strokeWidth={2}
-                                        className="hover:fill-[#D7713B] transition-colors"
-                                        color="#FBB95D"
-                                    />
-                                </Link>
+                                <Slide
+                                    direction="right"
+                                    delay={600}
+                                    duration={400}
+                                    className="w-fit"
+                                    cascade
+                                    triggerOnce
+                                >
+                                    <Link href={githubLink}>
+                                        <Github
+                                            width={"35px"}
+                                            height={"35px"}
+                                            strokeWidth={2}
+                                            className="hover:fill-[#D7713B] transition-colors"
+                                            color="#FBB95D"
+                                        />
+                                    </Link>
 
-                                <Link href={liveLink}>
-                                    <Chrome
-                                        width={"35px"}
-                                        height={"35px"}
-                                        strokeWidth={2}
-                                        className="hover:fill-[#D7713B] transition-colors"
-                                        color="#FBB95D"
-                                    />
-                                </Link>
-                            </Slide>
+                                    <Link href={liveLink}>
+                                        <Chrome
+                                            width={"35px"}
+                                            height={"35px"}
+                                            strokeWidth={2}
+                                            className="hover:fill-[#D7713B] transition-colors"
+                                            color="#FBB95D"
+                                        />
+                                    </Link>
+                                </Slide>
                             </div>
                         </div>
 
@@ -110,26 +119,32 @@ export const ListingProjects = () => {
                             </Fade>
                             <AttentionSeeker
                                 cascade
+                                triggerOnce
                                 effect="flash"
-                                duration={600}
-                                damping={0.15}
+                                duration={200}
+                                damping={0.01}
                                 className="text-[#FFE9CA]"
                             >
                                 {name}
                             </AttentionSeeker>
-                            <Fade duration={300} delay={600}>
+                            <Fade triggerOnce duration={300} delay={600}>
                                 <span className="opacity-90 text-3xl py-5 text-[#7C2629]">
                                     コードクリシオ製
                                 </span>
                             </Fade>
 
                             <Slide
+                                triggerOnce
                                 direction="right"
                                 duration={500}
                                 delay={400}
                                 className="absolute bottom-0 right-0 text-2xl text-right font-extrabold text-[#562151]"
                             >
-                                <span>これは<br/>{title}</span>
+                                <span>
+                                    これは
+                                    <br />
+                                    {title}
+                                </span>
                             </Slide>
                         </div>
                     </div>
