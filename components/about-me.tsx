@@ -12,7 +12,7 @@ export const AboutMe = () => {
     return (
         <section
             id="about-me"
-            className="w-full min-h-screen flex flex-col mt-[60px] relative"
+            className="w-full min-h-screen flex flex-col mt-[150px] relative"
         >
             <div className="h-[280px] relative flex items-end justify-center">
                 <AttentionSeeker effect="flash" duration={300}>
@@ -32,9 +32,7 @@ export const AboutMe = () => {
                 <div
                     className={`w-[750px] h-[240px] text-7xl text-[#7C2629] font-bold opacity-80 tracking-wide flex flex-col justify-end items-start gap-2 select-none`}
                 >
-                    <AttentionSeeker effect="flash" cascade duration={800}>
-                        こんにちは
-                    </AttentionSeeker>
+                    <p>こんにちは</p>
                     <span className="text-2xl">Kon'nichiwa</span>
                 </div>
             </div>
@@ -95,38 +93,38 @@ export const AboutMe = () => {
 
             <div className="absolute bottom-[-160px] left-1/2 transform -translate-x-1/2 flex">
                 <Slide direction="down" triggerOnce>
-                <BarChart2
-                    width={165}
-                    height={165}
-                    strokeWidth={0.9}
-                    fillOpacity={0}
-                    color="#562151"
-                    className="rotate-180"
-                />
-                <BarChart2
-                    width={165}
-                    height={165}
-                    strokeWidth={0.9}
-                    fillOpacity={0}
-                    color="#562151"
-                    className="transform scale-x-[-1] rotate-180"
-                />
-                <BarChart2
-                    width={165}
-                    height={165}
-                    strokeWidth={0.9}
-                    fillOpacity={0}
-                    color="#562151"
-                    className="rotate-180"
-                />
-                <BarChart2
-                    width={165}
-                    height={165}
-                    strokeWidth={0.9}
-                    fillOpacity={0}
-                    color="#562151"
-                    className="transform scale-x-[-1] rotate-180"
-                />
+                    <BarChart2
+                        width={165}
+                        height={165}
+                        strokeWidth={0.9}
+                        fillOpacity={0}
+                        color="#562151"
+                        className="rotate-180"
+                    />
+                    <BarChart2
+                        width={165}
+                        height={165}
+                        strokeWidth={0.9}
+                        fillOpacity={0}
+                        color="#562151"
+                        className="transform scale-x-[-1] rotate-180"
+                    />
+                    <BarChart2
+                        width={165}
+                        height={165}
+                        strokeWidth={0.9}
+                        fillOpacity={0}
+                        color="#562151"
+                        className="rotate-180"
+                    />
+                    <BarChart2
+                        width={165}
+                        height={165}
+                        strokeWidth={0.9}
+                        fillOpacity={0}
+                        color="#562151"
+                        className="transform scale-x-[-1] rotate-180"
+                    />
                 </Slide>
             </div>
         </section>
